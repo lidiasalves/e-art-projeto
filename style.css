@@ -1,0 +1,405 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    --color-black: rgb(19, 19, 19);
+    --color-blue: #242040;
+    --color-magenta: #ec3281;
+}
+
+.container {
+    padding-inline: 150px;
+}
+
+/*------------banner------------*/
+
+.container-banner {
+    width: 100%;
+    height: 165px;
+    background-color: rgb(49, 50, 65);
+    position: relative;
+}
+
+.container-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.2;
+}
+
+.text-banner {
+    text-align: center;
+    position: absolute;
+    color: white;
+    left: 50%;
+    top: 50%;
+    opacity: 0.9;
+    transform: translateX(-50%) translateY(-50%);
+    letter-spacing: 20px;
+    font-size: 12px;
+    text-wrap: nowrap;
+}
+
+.text-banner h1 {
+    font-weight:300;
+}
+
+.text-banner .bold-banner {
+    font-weight: bold;
+    padding-bottom: 15px;
+} 
+/*------------banner------------*/
+
+/*------------header------------*/
+
+header {
+    width: 100%;
+    height: 100px;
+    border-bottom: 2px solid #bfbfbf;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 60px;
+}
+
+a {
+    color: inherit;
+}
+
+.logo {
+    width: 190px;
+    display: block;
+}
+
+.logo-container {
+    position: relative;
+}
+
+nav {
+    /* border: 2px solid red; */
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    font-size: 20px;
+    color: var(--color-black);
+    align-items: center;
+}
+
+nav ul li .search-bar {
+    /* background-color: transparent; */
+    height: 30px;
+    width: 200px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding-left: 15px;
+    background-image: url("assets/images/lupa.png");
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: 95% center;
+}
+
+nav ul li .search-bar::placeholder {
+    color: #b6b6b6;
+}
+
+.lines {
+    width: 200px;
+    display: block;
+    position: absolute;
+}
+
+.line1 {
+    background-color: var(--color-blue);
+    height: 3px;
+    bottom: 0;
+    right: 105%;
+}
+
+.line2 {
+    background-color: var(--color-magenta);
+    height: 2px;
+    bottom: -10px;
+    right: 79.2%;
+}
+input {
+    
+}
+
+/*------------header------------*/
+
+/*------------highlight------------*/
+
+.highlight {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+    padding-top: 10px;
+}
+
+.highlight h1 {
+    font-size: 45px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: var(--color-black);
+    letter-spacing: 10px;
+}
+
+.highlight-pictures {
+    width: 100%;
+    height: 365px;
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 18% 17% 30% 17% 18%;
+    box-shadow: inset 0px -130px 80px -70px rgb(0 0 0 / 50%);
+}
+
+.picture {
+    display: flex;
+    align-items: end;
+}
+
+.picture img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.title {
+    margin-left: 25px;
+    margin-bottom: 20px;
+    position: absolute;
+}
+
+.title span {
+    display: block;
+    color: white;
+}
+
+.title .art-name {
+    font-size: 23px;
+    font-weight: 400;
+}
+
+.title .artist-name {
+    font-size: 20px;
+    font-weight: 100;
+}
+
+.highlight-btn button {
+    position: relative;
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: 100;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 6px;
+    border: 0;
+    padding: 4px 35px;
+    background: linear-gradient(to right, var(--color-blue) 50%, var(--color-magenta) 50%); 
+    background-size: 200%;
+    background-position: -15px;
+    transition: background 200ms ease-in-out;
+}
+
+.highlight-btn button:hover {
+    background-position: right;
+    cursor: pointer;
+}
+
+/*------------highlight------------*/
+
+/*------------nft------------*/
+
+.nft {
+    background-color: var(--color-blue);
+    display: flex;
+    padding-block: 150px;
+    position: relative;
+}
+
+.nft-text {
+    height: 100%;
+    width: 50%;
+    overflow: auto;
+    color: white;
+    font-size: 25px;
+    text-align: justify;
+}
+
+.nft-text h3 {
+    padding-bottom: 15px;
+    font-weight: 400;
+}
+
+.nft-text p {
+    padding-right: 40px;
+    font-weight: 100;
+}
+
+.nft-picture {
+    width: 50%;
+    position: relative;
+}
+
+
+.nft-picture img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.nft-picture::after {
+    position: absolute;
+    top: 0;
+    content: " ";
+    background-color: var(--color-magenta);
+    height: 100%;
+    width: 10px;
+    display: block;
+}
+
+.nft-description {
+    margin-top: -65px;
+    margin-left: 40px;
+}
+
+.nft-picture h2 {
+    color: white;
+    font-weight: 100;
+    padding-bottom: 3px;
+}
+
+.nft-picture span {
+    color: white;
+    font-size: 17px;
+    font-weight: 100;
+}
+
+.nft-btn span {
+    position: absolute;
+    padding: 4px 81px 4px 1px;
+    left: 150px;
+    top: 40px;
+    background-color: var(--color-magenta);
+    border: none;
+    color: white;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+/*------------nft------------*/
+
+/*------------galery------------*/
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: 30px;
+}
+
+.gallery-title {
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: 100;
+    letter-spacing: 8px;
+}
+
+.gallery .gallery-title .subterranea {
+    position: relative;
+    background: linear-gradient(to top, var(--color-black) 50%, white 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gallery .gallery-title .subterranea::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "‎";
+    background-color: var(--color-magenta);
+    width: 98%;
+    height: 50%;
+    display: block;
+    z-index: -1;
+}
+
+.gallery .mosaic {
+    width: 100%;
+    height: 560px;
+    display: grid;
+    grid-template-areas:
+    'a a b c d d'
+    'e f h h d d'
+    'e g h h i i';
+    gap: 2px;
+}
+
+.mosaic .img1 {
+    grid-area: i;
+    background-size: cover;
+    background-image: url("assets/images/imagens/pagina\ 3\ galeria/galeria1.png");
+}
+
+.mosaic .img2 {
+    grid-area: h;
+    background-size: cover;
+    background-image: url("assets/images/imagens/pagina\ 3\ galeria/galeria5.png");
+}
+
+.mosaic .img3 {
+    grid-area: f;
+    background-size: cover;
+    background-image: url("assets/images/imagens/pagina\ 3\ galeria/galeria2.png");
+}
+
+.mosaic .img4 {
+    grid-area: g;
+    background-size: cover;
+    background-image: url("assets/images/imagens/pagina\ 3\ galeria/galeria3.png");
+}
+
+.mosaic .img5 {
+    grid-area: d;
+    background-size: cover;
+    background-image: url("assets/images/imagens/pagina\ 3\ galeria/galeria6.png");
+}
+
+.mosaic .img6 {
+    grid-area: a;
+    background-size: cover;
+    background-image: url("assets/images/imagens/pagina\ 3\ galeria/galeria9.png");
+}
+
+.mosaic .img7 {
+    grid-area: c;
+    background-size: cover;
+    background-image: url("assets/images/imagens/pagina\ 3\ galeria/galeria7.png");
+}
+
+.mosaic .img8 {
+    grid-area: b;
+    background-size: cover;
+    background-image: url("assets/images/imagens/pagina\ 3\ galeria/galeria8.png");
+}
+
+.mosaic .img9 {
+    grid-area: e;
+    background-size: cover;
+    background-image: url("assets/images/imagens/pagina\ 3\ galeria/galeria4.png");
+}
+
+/*------------galery------------*/
